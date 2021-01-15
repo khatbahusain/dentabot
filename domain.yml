@@ -1,0 +1,77 @@
+version: "2.0"
+
+actions:
+  - action_appointments_available
+  - action_human_handoff
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - bot_challenge
+  - search_dentist
+  - toothache
+  - advice
+  - payment 
+  - vitale
+  - decalcification
+  - price_crown
+  - info_refund
+  - ask_price
+  - team
+  - service
+  - location
+  - contact
+  - human_handoff
+  - goodbye
+  - appointment
+
+
+responses:
+  utter_greet:
+  - text: "Bienvenue à notre centre dentaire. Comment puis-je vous aider?"
+
+  utter_goodbye:
+  - text: "Au revoir"
+
+  utter_iamabot:
+  - text: "Oui, Je suis un bot."
+
+  utter_contact:
+  - text: "Veuillez écrire votre numéro de téléphone ou votre e-mail."
+
+  utter_search_dentist:
+  - text: "Nos dentistes serons ravies de vous aider, quel est votre problème ?"
+  
+  utter_toothache:
+  - text: "C'est une situation urgente ?"
+
+  utter_affirm_urgent:
+  - text: "Voulez-vous prendre un rendez-vous ?"
+
+  utter_advice:
+  - text: "Soigner son brossage et se brosser les dents après chaque repas, pendant 3 minutes."
+  - text: "Faire régulièrement des bains de bouche."
+  - text: "Changer de brosse à dent régulièrement."
+  - text: "Privilégier les dentifrices contenant du fluor."
+  - text: "Aller chez le dentiste régulièrement."
+  - text: "Manger équilibré et limiter les aliments trop sucrés."
+
+  utter_payment:
+  - text: "Nous acceptons les paiments uniquement par carte bancaire."
+
+  utter_vitale:
+  - text: "Nous acceptons les cartes vitales et aussi les cartes européennes d'assurance maladie."
+
+  utter_decalcification:
+  - text: "L'opération de détartrage classique se compte comme une simple visite de routine chez le dentiste, et est donc remboursée comme telle. Il s'agit de l'acte classé SC12 dans la nomenclature de l'Assurance Maladie, dont le tarif de convention est fixé à 28,92 €."
+
+  utter_price_crown:
+  - text: "Le prix moyen d'une couronne dentaire est de 500€. Mais il peut monter à 1 200 € pour une couronne céramo-métal et à 1 500 € pour une couronne en céramique."
+
+  utter_info_refund:
+  - text: "La Sécurité sociale participe au remboursement de la pose d'une couronne dentaire. En effet, sur sa base de remboursement de 107,50 €, l'organisme en remboursera 70%, soit 75,25 €. Ceci peut paraître suffisant, mais le prix moyen d'une couronne dentaire est estimé à environ 500 €."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

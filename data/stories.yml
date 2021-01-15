@@ -1,0 +1,123 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_dentist
+  - action: utter_search_dentist
+  - intent: toothache
+  - action: utter_toothache
+  - intent: deny
+  - action: utter_advice
+
+
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: toothache
+  - action: utter_toothache
+  - intent: affirm
+  - action: action_appointments_available
+
+
+- story: payment happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: payment
+  - action: utter_payment
+
+
+- story: payment 
+  steps:
+  - intent: payment
+  - action: utter_payment
+
+
+- story: give me an advice 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: advice
+  - action: utter_advice
+  - intent: toothache
+  - intent: affirm
+  - action: action_appointments_available
+
+- story: decalcification 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: decalcification
+  - action: utter_decalcification
+
+
+- story: decalcification 2
+  steps:
+  - intent: decalcification
+  - action: utter_decalcification
+
+- story: price crown 1
+  steps:
+  - intent: price_crown
+  - action: utter_price_crown
+
+- story: price crown 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: price_crown
+  - action: utter_price_crown
+
+
+- story: info refund 1
+  steps:
+  - intent: info_refund
+  - action: utter_info_refund
+
+- story: info refund 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: appointment
+  - intent: info_refund
+  - action: utter_info_refund
+
+
+- story: vitale
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vitale
+  - action: utter_vitale
+  - intent: appointment
+  - action: action_appointments_available
+  - intent: info_refund
+  - action: utter_info_refund
+
+
+
+- story: take an appointment
+  steps:
+  - intent: appointment
+
+
+- story: search dentiste
+  steps:
+  - intent: appointment
+
+
+- story: human help
+  steps:
+  - intent: human_handoff
+  - action: action_human_handoff
+  
