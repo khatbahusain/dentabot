@@ -1,2 +1,3 @@
 # dentabot
-A chatbot built with Rasa
+
+- A simple chatbot built with Rasa
